@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+	<title><%= title %></title>
+	<link rel="stylesheet" href="/css/normalize.css" type="text/css">
+	<link rel="stylesheet" href="/iconfont/iconfont.css" type="text/css">
+	<link rel="stylesheet" href="/css/news.css" type="text/css">
+	<script src="/js/jquery-2.1.1.min.js"></script>
+	<script src="/js/comm.js" charset="utf-8"></script>
+	<script src="/js/xss.js" charset="utf-8"></script>
+	<script src="/js/news.js"></script>
+</head>
+<body>
+	<div class="container">
+		<header class="cf">
+			<a href="#"><span class="iconfont"></span><i  class="iconfont">&#xe603;</i></a>
+			<a href="#"><span class="iconfont"></span><i  class="iconfont">&#xe602;</i></a>
+			<a href="#"><span class="iconfont"></span><i  class="iconfont">&#xe601;</i></a>
+			<a href="#"><span class="iconfont"></span><i  class="iconfont">&#xe600;</i></a>
+		</header>
+		<nav>
+			<ul>
+				<li><a href="#" data-type="0">精选</a></li>
+				<li><a href="#" data-type="1">百家</a><i></i></li>
+				<li><a href="#" data-type="2">本地</a></li>
+				<li><a href="#" data-type="3">娱乐</a><i></i></li>
+				<li><a href="#" data-type="4">社会</a></li>
+				<li><a href="#" data-type="5">军事</a></li>
+				<li><a href="#" data-type="6">女人</a></li>
+				<li><a href="#" data-type="7">搞笑</a><i></i></li>
+				<li><a href="#" data-type="8">互联网</a><i></i></li>
+				<li><a href="#" data-type="9">科技</a></li>
+				<li><a href="#" data-type="10">更多</a></li>
+			</ul>
+		</nav>
+		<!-- 滚动图 -->
+		<div class="carousel">
+			<div id="focus" class="focus">
+				<div class="hd">
+					<ul></ul>
+				</div>
+				<div class="bd">
+					<ul>
+						<li><a href="#"><img _src="./img/1.jpg" src="./img/blank.png"></a></li>
+						<li><a href="#"><img _src="./img/2.jpg" src="./img/blank.png"></a></li>
+						<li><a href="#"><img _src="./img/3.jpg" src="./img/blank.png"></a></li>
+						<li><a href="#"><img _src="./img/6.jpg" src="./img/blank.png"></a></li>
+						<li><a href="#"><img _src="./img/8.jpg" src="./img/blank.png"></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+
+		<article>
+			<ul class="news-lists">
+				<li class="news-list">
+					<div class="newsimg">
+						<img src="img/1.jpg" alt="" width="100%">
+					</div>
+					<div class="newscontent">
+						<h1>111</h1>
+						<p><span class="newstime">2016-1-1</span><span class="newsscr">搜狐财经</span></p>
+					</div>
+				</li>
+			</ul>
+		</article>
+		<!-- nav的排列 -->
+		<script type="text/javascript">
+		$(document).ready(function(){
+			$('nav li').each(function(){
+				if($(this).find('a').html().split('').length>2)
+				{
+					$(this).width($('body').width()/3);
+				}
+				else
+				{
+					$(this).width($('body').width()/6);
+				}
+			})
+		})
+		</script>
+		
+		<!-- 滚动图 -->
+		<script src="/js/TouchSlide.1.1.js" charset="utf-8"></script>
+		<script type="text/javascript">TouchSlide({
+		      slideCell: '#focus',
+		      titCell: '.hd ul', // 开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
+		      mainCell: '.bd ul',
+		      effect: 'left',
+		      autoPlay: true, // 自动播放
+		      autoPage: true, // 自动分页
+		      switchLoad: '_src' // 切换加载，真实图片路径为"_src"
+		    })
+		</script>
+	</div>
+</body>
+</html>
+
+
+
+
+
+
